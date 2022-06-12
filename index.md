@@ -1,3 +1,3 @@
 Операционные системы
 
-+ [rsyslog](rsyslog.prdf)
++ [rsyslog](rsyslog.pdf)
