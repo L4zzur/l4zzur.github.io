@@ -8,6 +8,7 @@
 + [lvm](lvm.pdf)
 + [luks-ecryptfs](luks-ecryptfs.pdf)
 + [QEMU](QEMU.pdf)
++ + Для включения сервиса виртуализации: `sudo apt install libvirt-daemon-system`
 + [systemd](SystemD.pdf)
 + [Настройка сети](ethernet.pdf)
 
