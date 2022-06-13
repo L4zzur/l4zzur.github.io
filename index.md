@@ -1,5 +1,8 @@
 Операционные системы
 
+[Список тем с ссылками](https://69darling69.github.io/op/)
+
+Файлы с лабораторными
 + [rsyslog](rsyslog.pdf)
 + [rsync](rsync.pdf)
 + [lvm](lvm.pdf)
