@@ -14,7 +14,7 @@
 + [Настройка сети](ethernet.pdf)
 + + [Конфиги netplan (слева шлюз, справа клиент)](ipconfig.png)
 + DHCP
-+ + [/etc/default/isc-dhcp-server](etcdefaultisc-dhcp-server.png)
++ + [/etc/default/isc-dhcp-server](etcdefaultiscdhcp-server.png)
 + + [/etc/dhcp/dhcpd.conf](etcdhcpdhcpd.conf.png)
 
 Калькуляторы
