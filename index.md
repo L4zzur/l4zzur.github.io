@@ -13,6 +13,8 @@
 + [systemd](SystemD.pdf)
 + [Настройка сети](ethernet.pdf)
 + + [Конфиги netplan (слева шлюз, справа клиент)](ipconfig.png)
++ DHCP
++ + [/etc/default/isc-dhcp-server](etc default isc-dhcp-server.png)
 
 Калькуляторы
 + [crontab](https://crontab.guru/)
