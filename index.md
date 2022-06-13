@@ -12,7 +12,7 @@
 + [rescue shell](https://www.linuxtechi.com/boot-ubuntu-20-04-rescue-emergency-mode/)
 + [systemd](SystemD.pdf)
 + [Настройка сети](ethernet.pdf)
-+ + [Конфиги netplan (справа шлюз, слева клиент)](ipconfig.png)
++ + [Конфиги netplan (слева шлюз, справа клиент)](ipconfig.png)
 
 Калькуляторы
 + [crontab](https://crontab.guru/)
