@@ -3,7 +3,7 @@
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/) - первая бесплатная и открытая альтернатива ChatGPT.
 - [GPTGO.ai](https://gptgo.ai/?hl=ru) - поисковая выдача с GPT.
-- [smol.ai](https://smol.ai/) - **необходим вход через GitHub**, в качестве модели выбирать что-то из выделенного на скриншоте ![image](https://github.com/L4zzur/l4zzur.github.io/assets/66362624/f7d1dee5-b1c1-4944-943d-39bb081ed79e)
+- [smol.ai](https://smol.ai/) - **необходим вход через GitHub**, в качестве модели выбирать что-то из выделенного на скриншоте ![image](https://github.com/L4zzur/l4zzur.github.io/assets/66362624/0b57cac0-de0c-4bd4-a55d-4299d1137633)
 - [geekgpt](https://chat.geekgpt.org/) - ещё альтернатива.
 - [aiyunos](http://chat3.aiyunos.top) - китайская альтернатива, но должна работать аналогично.
 - [eqing](https://chat.eqing.tech) - ещё одна китайская альтернатива, **необходим вход через GitHub**.
