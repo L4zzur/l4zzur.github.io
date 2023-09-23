@@ -4,7 +4,7 @@
 [Файл со строками](m1s2.txt)
 
 ## AI чат-боты
-- [Huggingface](https://huggingface.co/) - первая бесплатная и открытая альтернатива ChatGPT.
+- [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
 - [GPTGO.ai](https://gptgo.ai/?hl=ru) - поисковая выдача с GPT.
 - [smol.ai](https://smol.ai/) - **необходим вход через GitHub**, в качестве модели выбирать что-то из выделенного на скриншоте
   <img src="https://github.com/L4zzur/l4zzur.github.io/assets/66362624/0b57cac0-de0c-4bd4-a55d-4299d1137633" width="350"/>
