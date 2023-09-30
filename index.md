@@ -3,6 +3,18 @@
 ## М1У2. Повторение. Функции и ООП.
 [Файл со строками](m1s2.txt)
 
+## М2У1. Введение в мобильную разработку
+Необходимые импорты
+```python
+from kivy.app import App # объект Приложения
+from kivy.uix.label import Label # объект Надписи
+from kivy.uix.button import Button # объект Кнопки
+from kivy.uix.textinput import TextInput # объект Строки для ввода текста
+from kivy.uix.boxlayout import BoxLayout # объект Макета для размещения виджетов
+from kivy.uix.screenmanager import ScreenManager, Screen # объекты Оконного менеджера для управления окнами и сам объекта Окна
+from kivy.uix.scrollview import ScrollView # объект Поля для прокрутки
+```
+
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
 - [GPTGO.ai](https://gptgo.ai/?hl=ru) - поисковая выдача с GPT.
