@@ -1,0 +1,94 @@
+from kivy.app import App # объект Приложения
+from kivy.uix.label import Label # объект Надписи
+from kivy.uix.button import Button # объект Кнопки
+from kivy.uix.textinput import TextInput # объект Строки для ввода текста
+from kivy.uix.boxlayout import BoxLayout # объект Макета для размещения виджетов
+from kivy.uix.screenmanager import ScreenManager, Screen # объекты Оконного менеджера для управления окнами и сам объекта Окна
+from kivy.uix.scrollview import ScrollView # объект Поля для прокрутки
+
+
+# Кастомный класс для кнопки перехода между экранами
+class MyButton(Button):
+    def __init__(self, screen, direction, goal, **kwargs):
+        super().__init__(**kwargs)
+        self.screen = screen # экран, где находится кнопка
+        self.direction = direction # направление анимации
+        self.goal = goal # целевой экран
+    
+    def on_press(self):
+        """
+        Обработка нажатия
+        """
+        self.screen.manager.transition.direction = self.direction # задаем направление анимации
+        self.screen.manager.current = self.goal # задаем целевой экран
+
+class FirstScr(Screen):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+
+        v1 = BoxLayout(orientation="vertical")
+
+        btn_back = MyButton(self, direction="up", goal="main", text="Назад")
+        v1.add_widget(btn_back)
+        self.add_widget(v1)
+    
+class SecondScr(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        v1 = BoxLayout(orientation="vertical")
+        btn_back = MyButton(self, direction="right", goal="main", text="Назад")
+        v1.add_widget(btn_back)
+        self.add_widget(v1)
+
+class ThirdScr(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        v1 = BoxLayout(orientation="vertical")
+        btn_back = MyButton(self, direction="down", goal="main", text="Назад")
+        v1.add_widget(btn_back)
+        self.add_widget(v1)
+
+class FourthScr(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        v1 = BoxLayout(orientation="vertical")
+        btn_back = MyButton(self, direction="left", goal="main", text="Назад")
+        v1.add_widget(btn_back)
+        self.add_widget(v1)
+
+
+class MainScr(Screen):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        
+        h1 = BoxLayout()
+
+        v1 = BoxLayout(orientation="vertical")
+
+        txt = Label(text="Выбери экран")
+
+        v1.add_widget(MyButton(self, direction="down", goal="first", text="1"))
+        v1.add_widget(MyButton(self, direction="left", goal="second", text="2"))
+        v1.add_widget(MyButton(self, direction="up", goal="third", text="3"))
+        v1.add_widget(MyButton(self, direction="right", goal="fourth", text="4"))
+
+        h1.add_widget(txt)
+        h1.add_widget(v1)
+        self.add_widget(h1)
+
+
+class MyApp(App):
+    def build(self):
+        sm = ScreenManager()
+        sm.add_widget(MainScr(name="main"))
+        sm.add_widget(FirstScr(name="first"))
+        sm.add_widget(SecondScr(name="second"))
+        sm.add_widget(ThirdScr(name="third"))
+        sm.add_widget(FourthScr(name="fourth"))
+
+        return sm
+    
+MyApp().run()
