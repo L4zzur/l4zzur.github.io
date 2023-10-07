@@ -3,16 +3,22 @@
 ## М1У2. Повторение. Функции и ООП.
 [Файл со строками](m1s2.txt)
 
-## М2У1. Введение в мобильную разработку
+## М2У1. Введение в мобильную разработку.
+[Файл с кодом](m2s1.txt)
+
+## М2У2. Разработка MVP мобильного приложения.
 Необходимые импорты
 ```python
-from kivy.app import App # объект Приложения
-from kivy.uix.label import Label # объект Надписи
-from kivy.uix.button import Button # объект Кнопки
-from kivy.uix.textinput import TextInput # объект Строки для ввода текста
-from kivy.uix.boxlayout import BoxLayout # объект Макета для размещения виджетов
-from kivy.uix.screenmanager import ScreenManager, Screen # объекты Оконного менеджера для управления окнами и сам объекта Окна
-from kivy.uix.scrollview import ScrollView # объект Поля для прокрутки
+from kivy.app import App
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
+from kivy.uix.button import Button
+from kivy.uix.textinput import TextInput
+from kivy.core.window import Window
+from kivy.uix.scrollview import ScrollView
+from instructions import txt_instruction, txt_test1, txt_test2, txt_test3, txt_sits
+from ruffier import test
 ```
 
 ## AI чат-боты
