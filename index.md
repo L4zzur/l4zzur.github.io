@@ -10,6 +10,7 @@ python app.py -m screen:phone_iphone_5,portrait,scale=.5
 
 ## М2У1. Введение в мобильную разработку.
 [Файл с кодом](m2s1.txt)
+[Week](https://weeek.net/ru)
 
 ## М2У2. Разработка MVP мобильного приложения.
 Необходимые импорты
