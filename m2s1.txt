@@ -26,9 +26,12 @@ class FirstScr(Screen):
     def __init__(self, **kw):
         super().__init__(**kw)
 
-        v1 = BoxLayout(orientation="vertical")
+        v1 = BoxLayout(orientation="vertical", size_hint=(.5, .5), pos_hint={"center_x": .5, "center_y": .5})
 
-        btn_back = MyButton(self, direction="up", goal="main", text="Назад")
+        btn = Button(text="Выбор 1", size_hint=(.5, 1), pos_hint={"left": 0})
+        btn_back = MyButton(self, direction="up", goal="main", text="Назад", size_hint=(.5, 1), pos_hint={"right": 1})
+
+        v1.add_widget(btn)
         v1.add_widget(btn_back)
         self.add_widget(v1)
     
@@ -38,8 +41,33 @@ class SecondScr(Screen):
 
         v1 = BoxLayout(orientation="vertical")
         btn_back = MyButton(self, direction="right", goal="main", text="Назад")
-        v1.add_widget(btn_back)
+
+        self.txt = Label(text="Выбор 2")
+        v1.add_widget(self.txt)
+
+        h0 = BoxLayout(size_hint=(0.8, None), height="30sp")
+        lb = Label(text="Введите пароль", halign="right")
+        self.input = TextInput(multiline=False)
+
+        h0.add_widget(lb)
+        h0.add_widget(self.input)
+
+        v1.add_widget(h0)
+
+        h1 = BoxLayout(size_hint={0.5, 0.2}, pos_hint={"center_x": 0.5})
+        btn = Button(text="OK")
+        btn.on_press = self.change_text
+
+        h1.add_widget(btn)
+        h1.add_widget(btn_back)
+
+        v1.add_widget(h1)
         self.add_widget(v1)
+    
+    def change_text(self):
+        self.txt.text = self.input.text + "? Не сработало..."
+
+
 
 class ThirdScr(Screen):
     def __init__(self, **kwargs):
