@@ -12,19 +12,10 @@ python app.py -m screen:phone_iphone_5,portrait,scale=.5
 ```
 
 ## М2У2. Разработка MVP мобильного приложения.
-Необходимые импорты
-```python
-from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
-from kivy.uix.button import Button
-from kivy.uix.textinput import TextInput
-from kivy.core.window import Window
-from kivy.uix.scrollview import ScrollView
-from instructions import txt_instruction, txt_test1, txt_test2, txt_test3, txt_sits
-from ruffier import test
-```
+Файлы с кодом 
+- [main_app.py](main_app_m2s2.txt)
+- [ruffier.py](ruffier_m2s2.txt) (Появится после занятия)
+
 [Week](https://weeek.net/ru)
 
 ## AI чат-боты
