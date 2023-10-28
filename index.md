@@ -12,9 +12,14 @@ python app.py -m screen:phone_iphone_5,portrait,scale=.5
 ```
 
 ## М2У2. Разработка MVP мобильного приложения.
+14 октября 2023
 Файлы с кодом 
 - [main_app.py](main_app_m2s2.txt)
-- [ruffier.py](ruffier_m2s2.txt) (Появится после занятия)
+
+21 октября 2023
+- [main_app.py](main_app_m2s2_1.txt)
+- [ruffier.py](ruffier_m2s2.txt)
+- [seconds.py](seconds_m2s2.txt) (Появится после занятия)
 
 [Week](https://weeek.net/ru)
 
