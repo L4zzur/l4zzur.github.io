@@ -4,6 +4,8 @@
 [Файл со строками](m1s2.txt)
 
 ## М2У1. Введение в мобильную разработку.
+[Week](https://weeek.net/ru)
+
 [Файл с кодом](m2s1.txt)
 
 Команда для эмуляции запуска приложения с телефона
@@ -17,11 +19,10 @@ python app.py -m screen:phone_iphone_5,portrait,scale=.5
 - [main_app.py](main_app_m2s2.txt)
 
 21 октября 2023
+Файлы с кодом 
 - [main_app.py](main_app_m2s2_1.txt)
 - [ruffier.py](ruffier_m2s2.txt)
 - [seconds.py](seconds_m2s2.txt) (Появится после занятия)
-
-[Week](https://weeek.net/ru)
 
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
