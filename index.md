@@ -20,8 +20,12 @@ python app.py -m screen:phone_iphone_5,portrait,scale=.5
 
 21 октября 2023
 Файлы с кодом 
-- [main_app.py](main_app_m2s2_1.txt)
+- [main_app.py](main_app_m2s2_1.txt) ```Добавлена функция check_int```
 - [ruffier.py](ruffier_m2s2.txt)
+
+28 октября
+- [main_app.py](main_app_m2s2_2.txt) ```Доделано использование функции check_int``` (Появится после занятия)
+- [ruffier.py](ruffier_m2s2.txt) ```Без изменений```
 - [seconds.py](seconds_m2s2.txt) (Появится после занятия)
 
 ## AI чат-боты
