@@ -24,9 +24,17 @@ python app.py -m screen:phone_iphone_5,portrait,scale=.5
 - [ruffier.py](ruffier_m2s2.txt)
 
 28 октября
+Необходимые импорты для модуля seconds.py
+```python
+from kivy.uix.label import Label
+from kivy.clock import Clock
+from kivy.properties import BooleanProperty
+```
+
 - [main_app.py](main_app_m2s2_2.txt) ```Доделано использование функции check_int``` (Появится после занятия)
 - [ruffier.py](ruffier_m2s2.txt) ```Без изменений```
 - [seconds.py](seconds_m2s2.txt) (Появится после занятия)
+
 
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
