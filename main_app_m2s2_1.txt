@@ -1,0 +1,264 @@
+# Необходимые импорты
+from kivy.app import App
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
+from kivy.uix.button import Button
+from kivy.uix.textinput import TextInput
+from kivy.core.window import Window
+from kivy.uix.scrollview import ScrollView
+# модуль с текстами
+from instructions import txt_instruction, txt_test1, txt_test2, txt_test3, txt_sits
+# модуль с логикой теста руфье
+from ruffier import test
+
+""" 
+Важные переменные
+для ввода пользователем
+"""
+name = ""   # имя
+age = 7     # возраст
+p1, p2, p3 = 0, 0, 0 # показания пульса
+
+def check_int(str_num):
+    """ Функция возвращает число или False, если не конвертируется """
+    try:
+        return int(str_num)
+    except:
+        return False
+
+
+class InfoScr(Screen):
+    """ Начальный экран с описанием теста и инструкцией """
+    def __init__(self, name):
+        # в конструктор родительского класса передаем названием
+        # оно уникальное, к нему обращаемся для переключения экранов
+        super().__init__(name=name)
+
+        # объект Строка с текстом инструкции
+        info = Label(text=txt_instruction)
+
+        # объект Строка с подсказкой для ввода
+        lb_name = Label(text="Введите имя:", halign="right")
+        # объект Поле ввода информации (имя пользователя)
+        self.in_name = TextInput(multiline=False)
+
+        # объект Строка с подсказкой для ввода
+        lb_age = Label(text="Введите возраст:", halign="right")
+        # объект Поле ввода информации (возраст пользователя)
+        self.in_age = TextInput(text="7", multiline=False)
+
+        # объект Кнопка для перехода на следующий экран
+        self.btn = Button(text="Начать", size_hint=(0.3, 0.2), pos_hint={"center_x": 0.5})
+        # задание функции-обработчика next при нажатии на кнопку    
+        self.btn.on_press = self.next
+
+        # Макеты для надписей и полей ввода
+        line1 = BoxLayout(size_hint=(0.8, None), height="30sp")
+        line2 = BoxLayout(size_hint=(0.8, None), height="30sp")
+
+        # Надпись + поле ввода имени
+        line1.add_widget(lb_name)
+        line1.add_widget(self.in_name)
+        # Надпись + поле ввода возраста
+        line2.add_widget(lb_age)
+        line2.add_widget(self.in_age)
+
+        # Главный макет
+        main = BoxLayout(orientation="vertical", padding=8, spacing=8)
+        main.add_widget(info)
+        main.add_widget(line1)
+        main.add_widget(line2)
+        main.add_widget(self.btn)
+
+        # Прикрепляем главный макет к экрану
+        self.add_widget(main)
+
+    def next(self):
+        """ Метод для перехода на следующий экран """
+        # глобальные переменные, поскольку используются везде
+        global name, age
+        name = self.in_name.text # получаем текст из поля для ввода имени
+        age = check_int(self.in_age.text) # получаем текст из поля для ввода возраста
+        if age == False or age < 7:
+            age = 7
+            self.in_age.text = str(age)
+        else:
+            self.manager.current = "pulse1" # устанавливаем текущий экран следующий
+
+
+class PulseScr(Screen):
+    """ Второй экран с вводом пульса в спокойном состоянии """
+    def __init__(self, name):
+        # в конструктор родительского класса передаем названием
+        # оно уникальное, к нему обращаемся для переключения экранов
+        super().__init__(name=name)
+
+        # объект Строка с текстом инструкции
+        info = Label(text=txt_test1)
+
+        # объект Строка с подсказкой для ввода
+        lb_result = Label(text="Введите результат:", halign="right")
+        # объект Поле ввода информации (пульс в спокойном состоянии)
+        self.in_result = TextInput(text="0", multiline=False)
+
+        # объект Кнопка для перехода на следующий экран
+        self.btn = Button(text="Продолжить", size_hint=(0.3, 0.2), pos_hint={"center_x": 0.5})
+        # задание функции-обработчика next при нажатии на кнопку    
+        self.btn.on_press = self.next
+
+        # Макет для надписи и поля ввода
+        line = BoxLayout(size_hint=(0.8, None), height="30sp")
+        line.add_widget(lb_result)
+        line.add_widget(self.in_result)
+
+        # Главный макет
+        main = BoxLayout(orientation="vertical", padding=8, spacing=8)
+        main.add_widget(info)
+        main.add_widget(line)
+        main.add_widget(self.btn)
+
+        # Прикрепляем главный макет к экрану
+        self.add_widget(main)
+
+    def next(self):
+        """ Метод для перехода на следующий экран """
+        # глобальные переменные, поскольку используются везде
+        global p1
+        p1 = int(self.in_result.text) # получаем текст из поля для ввода первого пульса
+        self.manager.current = "sits" # устанавливаем текущий экран следующий
+
+class CheckSits(Screen):
+    """ Третий экран с указанием для задания """
+    def __init__(self, name):
+        # в конструктор родительского класса передаем названием
+        # оно уникальное, к нему обращаемся для переключения экранов
+        super().__init__(name=name)
+
+        # объект Строка с инструкцией
+        info = Label(text=txt_sits)
+        # объект Кнопка для перехода на следующий экран
+        self.btn = Button(text="Продолжить", size_hint=(0.3,0.2), pos_hint={"center_x": 0.5})
+        # задание функции-обработчика next при нажатии на кнопку
+        self.btn.on_press = self.next
+
+        # Главный макет
+        main = BoxLayout(orientation="vertical", padding=8, spacing=8)
+        main.add_widget(info)
+        main.add_widget(self.btn)
+
+        # Прикрепляем главный макет к экрану
+        self.add_widget(main)
+
+    def next(self):
+        """ Метод для перехода на следующий экран """
+        self.manager.current = "pulse2" # устанавливаем текущий экран следующий
+
+
+class PulseScr2(Screen):
+    """ Четвертый экран с вводом двух показаний пульса """
+    def __init__(self, name):
+        # в конструктор родительского класса передаем названием
+        # оно уникальное, к нему обращаемся для переключения экранов
+        super().__init__(name=name)
+
+        # объект Строка с инструкцией
+        instr = Label(text=txt_test3)
+
+        # Макет для надписи и поля ввода второго результата
+        line1 = BoxLayout(size_hint=(0.8, None), height='30sp')
+        
+        # объект Строка с подсказкой для ввода
+        lbl_result1 = Label(text='Результат:', halign='right')
+        # объект Поле ввода информации (второй пульс)
+        self.in_result1 = TextInput(text='0', multiline=False)
+
+        # Надпись + поле ввода второго пульса
+        line1.add_widget(lbl_result1)
+        line1.add_widget(self.in_result1)
+
+        # Макет для надписи и поля ввода третьего результата
+        line2 = BoxLayout(size_hint=(0.8, None), height='30sp')
+
+        # объект Строка с подсказкой для ввода
+        lbl_result2 = Label(text='Результат после отдыха:', halign='right')
+        # объект Поле ввода информации (третий пульс)
+        self.in_result2 = TextInput(text='0', multiline=False)
+
+        # Надпись + поле ввода третьего пульса
+        line2.add_widget(lbl_result2)
+        line2.add_widget(self.in_result2)
+
+        # объект Кнопка для перехода на следующий экран
+        self.btn = Button(text='Завершить', size_hint=(0.3, 0.2), pos_hint={'center_x': 0.5})
+        # задание функции-обработчика next при нажатии на кнопку
+        self.btn.on_press = self.next
+
+        # Главный макет
+        outer = BoxLayout(orientation='vertical', padding=8, spacing=8)
+        outer.add_widget(instr)
+        outer.add_widget(line1)
+        outer.add_widget(line2)
+        outer.add_widget(self.btn)
+
+        # Прикрепляем главный макет к экрану
+        self.add_widget(outer)
+
+    def next(self):
+        """ Метод для перехода на следующий экран """
+        # глобальные переменные, поскольку используются везде
+        global p2, p3
+        p2 = int(self.in_result1.text) # получаем текст из поля для ввода второго пульса
+        p3 = int(self.in_result2.text) # получаем текст из поля для ввода третьего пульса
+        self.manager.current = 'result' # устанавливаем текущий экран следующий
+
+
+class Result(Screen):
+    """ Финальный экран с результатом """
+    def __init__(self, name):
+        # в конструктор родительского класса передаем названием
+        # оно уникальное, к нему обращаемся для переключения экранов
+        super().__init__(name=name)
+        
+        # Главный макет
+        self.outer = BoxLayout(orientation='vertical', padding=8, spacing=8)
+        
+        # объект Строка с пустым текстом
+        self.instr = Label(text = '')
+
+        self.outer.add_widget(self.instr)
+
+        # Прикрепляем главный макет к экрану
+        self.add_widget(self.outer)
+        
+        # задание функции-обработчика before
+        # для выполнения перед переходом на экран
+        self.on_enter = self.before
+    
+    def before(self):
+      """ Метод, который выполняется до переключения на этот экран """
+      # глобальные переменные, поскольку используются везде
+      global name
+      # генерируем текст с результатом
+      self.instr.text = name + '\n' + test(p1, p2, p3, age)
+
+
+
+class HeartCheck(App):
+    """ Класс для приложения"""
+    def build(self):
+        """ Метод для компоновки приложения """
+        # оконный менеджер
+        sm = ScreenManager()
+        # добавление всех экранов в менеджер
+        sm.add_widget(InfoScr(name="info"))
+        sm.add_widget(PulseScr(name="pulse1"))
+        sm.add_widget(CheckSits(name="sits"))
+        sm.add_widget(PulseScr2(name="pulse2"))
+        sm.add_widget(Result(name="result"))
+
+        return sm
+
+# Создание и запуск приложения
+app = HeartCheck()
+app.run()
