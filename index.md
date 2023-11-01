@@ -110,42 +110,37 @@ YouTube: `YouTube-red`
 [Simple Icons](https://github.com/simple-icons/simple-icons) — огромная коллекция иконок популярных брендов, компаний, технологий и сервисов в svg-формате. У проекта есть сайт, на котором можно найти удобную иконку и скачать себе, а потом использовать в своем md-файле. Вставлять изображения лучше с помощью HTML — так удобнее задавать необходимый размер.
 ![image](https://github.com/L4zzur/l4zzur.github.io/assets/66362624/80dc5d17-3fba-4cda-aace-b2d6eacc4ba9)
 
-Вставка изображений с помощью html
-
-
 [Markdown Badges](https://github.com/Ileriayo/markdown-badges) — библиотека бейджей с готовыми фрагментами md-кодов для вставки. Коллекция обширная, можно найти необходимые языки программирования, технологии и оформить блок, к примеру, навыков.
 ![image](https://github.com/L4zzur/l4zzur.github.io/assets/66362624/482137e9-1be2-48e3-9115-7062f88aa337)
-
-
 
 # Статистика
 В README-файл профиля можно добавлять различные виджеты со статистическими данными о себе и свой деятельности на GitHub. Данные автоматически обновляются с некоторой периодичностью и в профиле всегда отображается актуальная информация:
 
 [GitHub Trophy](https://github.com/ryo-ma/github-profile-trophy) — добавляет в профиль трофеи и ачивки. Награды показывают, насколько пользователь активно ведет свой профиль. Для выбора доступно более десяти различных цветовых схем, что позволяет настроить виджет под свой стиль оформления. Также можно выбрать различные варианты расположения наград и включить фильтрацию. Для добавления необходимо вставить следующий md-код в свой файл, параметр username= необходимо заменить на свой никнейм на платформе.
 
-`[![trophy](https://github-profile-trophy.vercel.app/?username=ТВОЙ НИКНЕЙМ)](https://github.com/ryo-ma/github-profile-trophy)`\
-[trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)
+`![trophy](https://github-profile-trophy.vercel.app/?username=ТВОЙ НИКНЕЙМ)`\
+![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)
 
 [Longest streak stats](https://github.com/DenverCoder1/github-readme-streak-stats) — добавляет виджет, показывающий актуальную продолжительность ежедневных сессий на GitHub, самую длинную сессию за все время и суммарное количество вкладов в сообщество. Автор виджета предлагает подробную инструкцию по его настройке, но вместе с этим предоставляет и визуальный конструктор, позволяющий настроить необходимую цветовую схему. Кроме этого, в репозитории разработчика имеется руководство по развертыванию приложения на собственном сервере. Если вставлять код из примеров, то параметр user= надо заменить на свой никнейм, если создавать собственный дизайн в конструкторе, то система выдаст необходимый код для вставки.
 [Конструктор](https://github-readme-streak-stats.herokuapp.com/demo/)
 
-`[GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ТВОЙ НИКНЕЙМ)`\
-[GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=L4zzur)
+`![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ТВОЙ НИКНЕЙМ)`\
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=L4zzur)
 
 [Top Languages Card](https://github.com/anuraghazra/github-readme-stats) — виджет, выводящий статистику по часто используемым языкам в репозиториях пользователя. Можно выводить информацию как по всем репозиториям в профиле, так и только по избранным. Есть возможность удалить некоторые языки и никогда не показывать их в поле активности. Также можно выбрать компактный и более подробный вид карточки. Есть поддержка разных цветовых схем. При вставке кода необходимо заменить параметр username= на свой никнейм.
 
 <!---Для компактной версии-->
-`[Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ТВОЙ НИКНЕЙМ&layout=compact)`\
-[Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)
+`![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ТВОЙ НИКНЕЙМ&layout=compact)`\
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)
 
 <!---Для подробной версии-->
-`[Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ТВОЙ НИКНЕЙМ)`\
-[Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra)
+`![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ТВОЙ НИКНЕЙМ)`\
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra)
 
 [GitHub Stats Card](https://github.com/anuraghazra/github-readme-stats) — карточка от разработчика прошлого виджета. Виджет выводит основную информацию о деятельности пользователь на платформе — общее количество звезд, коммитов и вкладов в сообщество. Также карточка отображает оценку пользователя, сравнивая его деятельность с другими юзерами GitHub. Доступно около десятка уже готовых тем, но можно настроить и уникальную. Ненужные позиции в статистике можно скрыть. Для вставки все так же надо скопировать код, добавить в свой файл и заменить параметр username= на актуальный.
 
 `[Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)`\
-[Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)
 
 [GitHub Profile Views Counter](https://github.com/topics/visitor-counter) — небольшой бейдж, выводящий информацию о количестве посетителей профиля. В поиске GitHub можно найти несколько репозиториев с реализацией виджета, но устроены они приблизительно одинаково, поэтому рассмотрим на примере самого популярного. Бейдж можно персонализировать, выбрав цвет из готовых или указать необходимый в шестнадцатеричной системе, на выбор есть три разных дизайна и возможность изменить исходный текст бейджа. Для вставки надо заменить поле your-github-username на соответствующее своему никнейму.
 
@@ -153,7 +148,7 @@ YouTube: `YouTube-red`
 ![](https://komarev.com/ghpvc/?username=L4zzur)
 
 
-Забавы ради
+# Забавы ради
 В readme-файлы профиля можно добавлять не только полезные статистические данные, но и различные украшения и забавные блоки. Эти элементы не расскажут о пользователе как о специалисте, но могут пригодиться для оформления.
 
 [README Jokes](https://github.com/ABSphreak/readme-jokes) — карточки со случайно генерируемыми шутками. В репозитории есть пара десятков готовых тем, но доступна и кастомизация, поэтому можно воплотить практически любое цветовое решение. Для вставки в профиль надо просто скопировать себе следующий фрагмент кода.
@@ -165,5 +160,5 @@ Markdown:
 
 [Github Readme Quotes](https://github.com/PiyushSuthar/github-readme-quotes) — динамически выводит блок с цитатами. Размер ограничен двумя вариантами — вертикальный и горизонтальный, а цветовых схем четыре. В будущем автор проекта планирует расширить параметры кастомизации. Встроить в свой профиль можно с помощью следующего md-кода:
 
-`[Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)`\
-[Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+`![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)`\
+![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
