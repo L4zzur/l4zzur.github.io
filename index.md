@@ -1,4 +1,5 @@
 # Шпаргалки и инструменты
+---
  - [Как пользоваться Markdown](https://gist.github.com/Jekins/2bf2d0638163f1294637)
 ---
  - [Генератор кастомных бейджей](https://shields.io/)
@@ -14,6 +15,7 @@
  - [Коллекция классных Readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme)
 ---
  - ### [Мой Readme](https://gist.github.com/L4zzur/b438d147a2bf8ac38e4edf7816456c18)
+---
 ## Генераторы Readme 
  - [Генератор Readme](https://arturssmirnovs.github.io/github-profile-readme-generator/)
  - [Генератор Readme](https://profilinator.rishav.dev/)
