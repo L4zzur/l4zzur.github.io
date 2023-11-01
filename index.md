@@ -32,7 +32,7 @@
 </div>
 ```
 
-Кроме того, для генерации шапки можно использовать сайт https://reheader.glitch.me/
+Кроме того, для генерации шапки можно использовать сайт <https://reheader.glitch.me/>
 
 ![0a4f672e-7d5c-4254-8f5a-847c2924bdf6_header-image-readme-gen](https://github.com/L4zzur/l4zzur.github.io/assets/66362624/6a6e93cf-25f0-4e4e-ab26-ea077a171e84)
 
