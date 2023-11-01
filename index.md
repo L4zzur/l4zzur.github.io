@@ -128,27 +128,27 @@ YouTube: `YouTube-red`
 [Конструктор](https://github-readme-streak-stats.herokuapp.com/demo/)
 
 `[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ТВОЙ НИКНЕЙМ)](https://git.io/streak-stats)`\
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=DenverCoder1)](https://git.io/streak-stats)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=L4zzur)](https://git.io/streak-stats)
 
 [Top Languages Card](https://github.com/anuraghazra/github-readme-stats) — виджет, выводящий статистику по часто используемым языкам в репозиториях пользователя. Можно выводить информацию как по всем репозиториям в профиле, так и только по избранным. Есть возможность удалить некоторые языки и никогда не показывать их в поле активности. Также можно выбрать компактный и более подробный вид карточки. Есть поддержка разных цветовых схем. При вставке кода необходимо заменить параметр username= на свой никнейм.
 
 <!---Для компактной версии-->
-`[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ТВОЙ НИКНЕЙМ&layout=compact)](https://github.com/anuraghazra/github-readme-stats)`\
+`[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ТВОЙ НИКНЕЙМ&layout=compact)](https://github.com/ТВОЙ НИКНЕЙМ/github-readme-stats)`\
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 <!---Для подробной версии-->
-`[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ТВОЙ НИКНЕЙМ)](https://github.com/anuraghazra/github-readme-stats)`\
+`[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ТВОЙ НИКНЕЙМ)](https://github.com/ТВОЙ НИКНЕЙМ/github-readme-stats)`\
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 
 [GitHub Stats Card](https://github.com/anuraghazra/github-readme-stats) — карточка от разработчика прошлого виджета. Виджет выводит основную информацию о деятельности пользователь на платформе — общее количество звезд, коммитов и вкладов в сообщество. Также карточка отображает оценку пользователя, сравнивая его деятельность с другими юзерами GitHub. Доступно около десятка уже готовых тем, но можно настроить и уникальную. Ненужные позиции в статистике можно скрыть. Для вставки все так же надо скопировать код, добавить в свой файл и заменить параметр username= на актуальный.
 
-`[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)`\
+`[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/ТВОЙ НИКНЕЙМ/github-readme-stats)`\
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 
 [GitHub Profile Views Counter](https://github.com/topics/visitor-counter) — небольшой бейдж, выводящий информацию о количестве посетителей профиля. В поиске GitHub можно найти несколько репозиториев с реализацией виджета, но устроены они приблизительно одинаково, поэтому рассмотрим на примере самого популярного. Бейдж можно персонализировать, выбрав цвет из готовых или указать необходимый в шестнадцатеричной системе, на выбор есть три разных дизайна и возможность изменить исходный текст бейджа. Для вставки надо заменить поле your-github-username на соответствующее своему никнейму.
 
-`![](https://komarev.com/ghpvc/?username=your-github-username)`
-![](https://komarev.com/ghpvc/?username=your-github-username)
+`![](https://komarev.com/ghpvc/?username=ТВОЙ НИКНЕЙМ)`\
+![](https://komarev.com/ghpvc/?username=L4zzur)
 
 
 Забавы ради
@@ -165,8 +165,3 @@ Markdown:
 
 `[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)`\
 [![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
-
-
-![Трофеи](https://github-profile-trophy.vercel.app/?username=L4zzur)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=L4zzur)
-![Статистика](https://github-readme-stats.vercel.app/api?username=L4zzur)
