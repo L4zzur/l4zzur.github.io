@@ -14,16 +14,16 @@ python app.py -m screen:phone_iphone_5,portrait,scale=.5
 ```
 
 ## М2У2. Разработка MVP мобильного приложения.
-14 октября 2023
+### 14 октября 2023
 Файлы с кодом 
 - [main_app.py](kivy/main_app_m2s2.txt)
 
-21 октября 2023
+### 21 октября 2023
 Файлы с кодом 
 - [main_app.py](kivy/main_app_m2s2_1.txt) ```Добавлена функция check_int```
 - [ruffier.py](kivy/ruffier_m2s2.txt)
 
-28 октября 2023
+### 28 октября 2023
 Необходимые импорты для модуля `seconds.py`
 ```python
 from kivy.uix.label import Label
@@ -35,7 +35,7 @@ from kivy.properties import BooleanProperty
 - [ruffier.py](kivy/ruffier_m2s2.txt) ```Без изменений```
 - [seconds.py](kivy/seconds_m2s3.txt) ```Реализован класс для таймера```
 
-4 ноября 2023
+### 4 ноября 2023
 Необходимые импорты для `runner.py`
 ```python
 from kivy.properties import NumericProperty, BooleanProperty
