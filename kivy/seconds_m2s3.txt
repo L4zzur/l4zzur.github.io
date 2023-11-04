@@ -1,0 +1,39 @@
+from kivy.uix.label import Label
+from kivy.clock import Clock
+from kivy.properties import BooleanProperty
+
+class Seconds(Label):
+    """ Класс таймера (строка с меняющимся текстом) """
+    # свойство завершения таймера
+    done = BooleanProperty(False)
+
+    def __init__(self, total, **kwargs):
+        super().__init__(**kwargs)
+        self.current = 0 # текущее количество секунд
+        self.total = total # общее количество секунд
+        text = f"Прошло секунд: {str(self.current)}" # текст таймера
+        self.text = text # текст на надписи (поскольку класс - наследник Label)
+
+    def restart(self, total, **kwargs):
+        ''' Функция для рестарта '''
+        self.done = False # обнуляем завершение таймера
+        self.current = 0 # обнуляем текущее количество секунд
+        self.total = total # меняем общее количество секунд
+        self.text = f"Прошло секунд: {str(self.current)}" # обновляем текст
+        self.start() # запускаем таймер
+
+    def start(self):
+        """ Функция для запуска таймера """
+        # запускаем событие на смену текста кнопки через каждую секунду
+        Clock.schedule_interval(self.change, 1)
+
+    def change(self, dt):
+        """ Функция для изменения текста таймера """
+        self.current += 1 # увеличиваем таймер на секунду
+        self.text = f"Прошло секунд: {str(self.current)}" # обновляем текст
+        # если текущее время больше общего
+        if self.current >= self.total:
+            # активируем финиш таймера
+            self.done = True
+            # останавливаем планировщик
+            return False

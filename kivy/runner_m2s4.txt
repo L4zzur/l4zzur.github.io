@@ -1,0 +1,16 @@
+from kivy.properties import NumericProperty, BooleanProperty
+from kivy.uix.button import Button
+from kivy.animation import Animation
+
+from kivy.uix.boxlayout import BoxLayout
+
+class Runner(BoxLayout):
+
+    def __init__(self):
+        pass
+
+    def start(self):
+        pass
+
+    def next(self, widget, step):
+        pass
