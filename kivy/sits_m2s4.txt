@@ -1,10 +1,18 @@
 from kivy.uix.label import Label
-from kivy.clock import Clock
 
 class Sits(Label):
-    
+    """ Класс для счетчика приседаний на основе Label"""
     def __init__(self, total, **kwargs):
-        pass
+        """ Конструктор класса """
+        super().__init__(**kwargs)
+        self.current = 0 # текущее количество приседаний
+        self.total = total # общее количество приседаний
+        text = f"Осталось приседаний: {self.total}" # текст счетчика
+        self.text = text
 
     def next(self, *args):
-        pass
+        self.current += 1 # увеличиваем текущее количество
+        # считаем оставшееся количество приседаний
+        remain = max(0, self.total - self.current)
+        text = f"Осталось приседаний: {remain}" # текст счетчика
+        self.text = text
