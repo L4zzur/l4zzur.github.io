@@ -45,7 +45,7 @@ from kivy.properties import BooleanProperty
 ```python
 from kivy.uix.label import Label
 ```
-- [main_app.py](kivy/main_app_m2s4.txt) ```Реализация остальных таймеров```
+- [main_app.py](kivy/main_app_m2s4_1.txt) ```Реализация остальных таймеров```
 - [ruffier.py](kivy/ruffier_m2s2.txt) ```Без изменений```
 - [seconds.py](kivy/seconds_m2s3.txt) ```Без изменений```
 - [sits.py](kivy/sits_m2s4.txt) ```Реализация класса для счетчика приседаний```
