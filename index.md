@@ -86,8 +86,8 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [data_sience_2.py](pandas/data_sience_2.txt)
 
 ### 25 ноября 2023
-- [data_sience_3.py](pandas/data_sience_1.txt) 
-- [data_sience_4.py](pandas/data_sience_2.txt)
+- [data_sience_3.py](pandas/data_sience_3.txt) 
+- [data_sience_4.py](pandas/data_sience_4.txt)
 
 
 ## AI чат-боты
