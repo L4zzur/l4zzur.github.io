@@ -81,9 +81,13 @@ python app.py -m screen:phone_oneplus_6t,portrait
 [screens.txt](screens.txt)
 
 ## Анализ данных
-### 11 ноября 2023
-- [task1.py](pandas/m2l1_1.txt) 
-- [task2.py](pandas/m2l1_2.txt)
+### 18 ноября 2023
+- [data_sience_1.py](pandas/data_sience_1.txt) 
+- [data_sience_2.py](pandas/data_sience_2.txt)
+
+### 25 ноября 2023
+- [data_sience_3.py](pandas/data_sience_1.txt) 
+- [data_sience_4.py](pandas/data_sience_2.txt)
 
 
 ## AI чат-боты
