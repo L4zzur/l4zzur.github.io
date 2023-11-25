@@ -59,11 +59,11 @@ from kivy.animation import Animation
 
 from kivy.uix.boxlayout import BoxLayout
 ```
-- [main_app.py](kivy/main_app_m2s4_1.txt) (Появится после занятия)
+- [main_app.py](kivy/main_app_m2s4_1.txt) ```Реализовали анимацию для приседаний```
 - [ruffier.py](kivy/ruffier_m2s2.txt) ```Без изменений```
 - [seconds.py](kivy/seconds_m2s3.txt) ```Без изменений```
 - [sits.py](kivy/sits_m2s4.txt) ```Без изменений```
-- [runner.py](kivy/runner_m2s4.txt) (Появится после занятия)
+- [runner.py](kivy/runner_m2s4.txt) ```Анимация для приседаний```
 
 #### Эмуляция различных экранов
 
@@ -159,6 +159,11 @@ If the generated window is too large, you can specify a scale:
 
     python main.py -m screen:note2,portrait,scale=.75
 ```
+
+## Анализ данных
+### 11 ноября 2023
+- [task1.py](pandas/m2l1_1.txt) 
+- [task2.py](pandas/m2l1_2.txt)
 
 
 ## AI чат-боты

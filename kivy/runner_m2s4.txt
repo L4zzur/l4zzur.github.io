@@ -5,12 +5,47 @@ from kivy.animation import Animation
 from kivy.uix.boxlayout import BoxLayout
 
 class Runner(BoxLayout):
+    value = NumericProperty(0) # количество текущих приседаний
+    finished = BooleanProperty(False) # флаг завершения
 
-    def __init__(self):
-        pass
-
+    def __init__(self, total, steptime, autorepeat, bcolor=(0.73, 0.15, 0.96, 1), btext="Приседание", **kwargs):
+        super().__init__(**kwargs)
+        self.total = total # количество шагов
+        self.btext = btext # текст кнопки
+        self.autorepeat = autorepeat # есть повтор анимации или нет
+        # сама анимация
+        # сверху вниз + снизу вверх
+        self.animation = Animation(
+            pos_hint={"top": 0.1}, 
+            duration=steptime/2
+        ) + Animation(
+            pos_hint={"top": 1.0},
+            duration=steptime/2
+        )
+        # на каждый шаг анимации присвоить функцию next
+        self.animation.on_progress = self.next
+        # кнопка, которая анимируется
+        self.btn = Button(size_hint=(1, 0.1), pos_hint={"top": 1.0})
+        self.btn.background_color = bcolor # цвет кнопки
+        self.add_widget(self.btn) # добавляем её на лэйаут
+    
     def start(self):
-        pass
-
+        # функция для запуска анимации
+        self.value = 0 # обнуляем счетчик
+        self.finished = False # обнуляем финиш
+        self.btn.text = self.btext # обновляем текст
+        # если нужен автоповтор
+        if self.autorepeat:
+            self.animation.repeat = True # включаем его
+        # запускаем анимацию для кнопки
+        self.animation.start(self.btn)
+    
     def next(self, widget, step):
-        pass
+        # функция для каждого шага анимации
+        # когда завершаем шаг анимации
+        if step == 1.0:
+            self.value += 1 # увеличиваем счетчик
+            # если счетчик дошел до нужного значения
+            if self.value >= self.total:
+                self.animation.repeat = False # выключаем автоповтор
+                self.finished = True # завершаем анимацию

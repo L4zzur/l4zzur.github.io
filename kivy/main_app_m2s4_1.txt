@@ -12,6 +12,8 @@ from instructions import txt_instruction, txt_test1, txt_test2, txt_test3, txt_s
 # модуль с логикой теста руфье
 from ruffier import test
 from seconds import Seconds
+from sits import Sits
+from runner import Runner
 
 """ 
 Важные переменные
@@ -101,10 +103,10 @@ class PulseScr(Screen):
         info = Label(text=txt_test1)
 
         # объект Таймер на 15 секунд
-        self.lb_sec = Seconds(15)
+        self.lb_sec = Seconds(5)
         # после завершения таймера выполнится функция self.finish
         self.lb_sec.bind(done=self.finish)
-        # перехода на следующий экран нет
+        # свойство, нужен переход на следующий экран или нет
         self.next_screen = False
 
         # объект Строка с подсказкой для ввода
@@ -177,24 +179,56 @@ class CheckSits(Screen):
         # оно уникальное, к нему обращаемся для переключения экранов
         super().__init__(name=name)
 
+        # свойство, нужен переход на следующий экран или нет
+        self.next_screen = False
+
         # объект Строка с инструкцией
-        info = Label(text=txt_sits)
+        info = Label(text=txt_sits, size_hint=(0.5, 1))
         # объект Кнопка для перехода на следующий экран
         self.btn = Button(text="Продолжить", size_hint=(0.3,0.2), pos_hint={"center_x": 0.5})
         # задание функции-обработчика next при нажатии на кнопку
         self.btn.on_press = self.next
 
+        # объект счетчик на 30 приседаний
+        self.lb_sits = Sits(30)
+        # объект анимации на 30 приседаний
+        self.run = Runner(total=30, steptime=1.5, autorepeat=True, size_hint=(0.4, 1))
+        # при завершении анимации вызываем функцию finish
+        self.run.bind(finished=self.finish)
+
+
+        # Макет для надписи, счетчика и анимации
+        line = BoxLayout()
+        vline = BoxLayout(orientation="vertical", size_hint=(0.3, 1))
+        vline.add_widget(self.lb_sits)
+        line.add_widget(info)
+        line.add_widget(vline)
+        line.add_widget(self.run)
+
         # Главный макет
         main = BoxLayout(orientation="vertical", padding=8, spacing=8)
-        main.add_widget(info)
+        main.add_widget(line)
         main.add_widget(self.btn)
 
         # Прикрепляем главный макет к экрану
         self.add_widget(main)
 
+        self.run.bind(finished=self.finish)
+    
+    def finish(self, instance, value):
+        """ Метод для смены состояния после окончания приседаний """
+        self.btn.set_disabled(False)
+        self.btn.text = "Продолжить"
+        self.next_screen = True
+
     def next(self):
         """ Метод для перехода на следующий экран """
-        self.manager.current = "pulse2" # устанавливаем текущий экран следующий
+        if self.next_screen:
+            self.manager.current = "pulse2"
+        else:
+            self.btn.set_disabled(True)
+            self.run.start()
+            self.run.bind(value=self.lb_sits.next)
 
 
 class PulseScr2(Screen):
@@ -204,14 +238,19 @@ class PulseScr2(Screen):
         # оно уникальное, к нему обращаемся для переключения экранов
         super().__init__(name=name)
 
+        # свойство, нужен переход на следующий экран или нет
         self.next_screen = False
+        # свойство, какой сейчас этап
         self.stage = 0
 
         # объект Строка с инструкцией
         instr = Label(text=txt_test3)
 
-        self.lb_sec = Seconds(15)
+        # объект таймера на 5 секунд
+        self.lb_sec = Seconds(5)
+        # после завершения таймера вызываем функцию finish
         self.lb_sec.bind(done=self.finish)
+        # надпись с информацией
         self.lb = Label(text="Считайте пульс!")
 
         # Макет для надписи и поля ввода второго результата
@@ -243,12 +282,14 @@ class PulseScr2(Screen):
         # задание функции-обработчика next при нажатии на кнопку
         self.btn.on_press = self.next
 
+        # отключаем поля для ввода пульса
         self.in_result1.set_disabled(True)
         self.in_result2.set_disabled(True)
 
         # Главный макет
         outer = BoxLayout(orientation='vertical', padding=8, spacing=8)
         outer.add_widget(instr)
+        outer.add_widget(self.lb)
         outer.add_widget(self.lb_sec)
         outer.add_widget(line1)
         outer.add_widget(line2)
@@ -258,41 +299,52 @@ class PulseScr2(Screen):
         self.add_widget(outer)
 
     def finish(self, *args):
+        """ Метод для смены состояния после окончания каждого этапа """
+        # если таймер закончился
         if self.lb_sec.done:
+            # и было первое (0) состояние
             if self.stage == 0:
-                self.stage = 1
-                self.lb.text = "Отдыхайте"
-                self.lb_sec.restart(30)
-                self.in_result1.set_disabled(False)
+                self.stage = 1 # меняем на следующее состояние
+                self.lb.text = "Отдыхайте" # меняем текст
+                self.lb_sec.restart(30) # перезапускаем таймер на отдых 30 сек
+                self.in_result1.set_disabled(False) # разблокируем ввод первого пульса
+            # и было второе (1) состояние
             elif self.stage == 1:
-                self.stage = 2
-                self.lb.text = "Считайте пульс"
-                self.lb_sec.restart(15)
+                self.stage = 2 # меняем на следующее состояние
+                self.lb.text = "Считайте пульс" # меняем текст
+                self.lb_sec.restart(15) # перезапускаем таймер на пульс 15 сек
+            # и было третье (2) состояние
             else:
-                self.in_result2.set_disabled(False)
-                self.btn.set_disabled(False)
-                self.btn.text = "Завершить"
-                self.next_screen = True
+                self.in_result2.set_disabled(False) # разблокируем ввод первого пульса
+                self.btn.set_disabled(False) # разблокируем кнопку перехода
+                self.btn.text = "Завершить" # меняем текст
+                self.next_screen = True # даем возможность переключить экран
     
     def next(self):
         """ Метод для перехода на следующий экран """
-        # глобальные переменные, поскольку используются везде
+        # если переходим на следующий экран
         if self.next_screen:
+            # глобальные переменные, поскольку используются везде
             global p2, p3
+            # считываем два показателя пульса
             p2 = check_int(self.in_result1.text)
             p3 = check_int(self.in_result2.text)
 
+            # проверяем пульс 2
             if p2 == False or p2 <= 0:
                 p2 = 0
                 self.in_result1.text = str(p2)
+            # проверяем пульс 3
             elif p3 == False or p3 <= 0:
                 p3 = 0
                 self.in_result2.text = str(p3)
+            # если все ок то переключаем экран
             else:
                 self.manager.current = "result"
+        # если не переход на другой экран
         else:
-            self.btn.set_disabled(True)
-            self.lb_sec.start()
+            self.btn.set_disabled(True) # блокируем кнопку
+            self.lb_sec.start() # запускаем таймер
 
 class Result(Screen):
     """ Финальный экран с результатом """
@@ -317,11 +369,11 @@ class Result(Screen):
         self.on_enter = self.before
     
     def before(self):
-      """ Метод, который выполняется до переключения на этот экран """
-      # глобальные переменные, поскольку используются везде
-      global name
-      # генерируем текст с результатом
-      self.instr.text = name + '\n' + test(p1, p2, p3, age)
+        """ Метод, который выполняется до переключения на этот экран """
+        # глобальные переменные, поскольку используются везде
+        global name
+        # генерируем текст с результатом
+        self.instr.text = name + '\n' + test(p1, p2, p3, age)
 
 
 
