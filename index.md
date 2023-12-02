@@ -1,9 +1,12 @@
 # Полезные ссылки и материалы
 
-## М1У2. Повторение. Функции и ООП.
+## М1. Повторение
+### 23 сентября 2023 (М1У2. Повторение. Функции и ООП)
 [Файл со строками](m1s2.txt)
 
-## М2У1. Введение в мобильную разработку.
+
+## М2. Мобильная разработка
+### 30 сентября 2023 (М2У1. Введение в мобильную разработку)
 [Week](https://weeek.net/ru)
 
 [Файл с кодом](m2s1.txt)
@@ -13,17 +16,16 @@
 python app.py -m screen:phone_iphone_5,portrait,scale=.5
 ```
 
-## М2У2. Разработка MVP мобильного приложения.
-### 7 октября 2023
+### 7 октября 2023 (М2У2 Разработка MVP мобильного приложения)
 Файлы с кодом 
 - [main_app.py](kivy/main_app_m2s2.txt)
 
-### 14 октября 2023
+### 14 октября 2023 (М2У2 Разработка MVP мобильного приложения)
 Файлы с кодом 
 - [main_app.py](kivy/main_app_m2s2_1.txt) ```Добавлена функция check_int```
 - [ruffier.py](kivy/ruffier_m2s2.txt)
 
-### 21 октября 2023
+### 21 октября 2023 (М2У2 Разработка MVP мобильного приложения)
 Необходимые импорты для модуля `seconds.py`
 ```python
 from kivy.uix.label import Label
@@ -35,12 +37,12 @@ from kivy.properties import BooleanProperty
 - [ruffier.py](kivy/ruffier_m2s2.txt) ```Без изменений```
 - [seconds.py](kivy/seconds_m2s3.txt) ```Реализован класс для таймера```
 
-### 28 октября 2023
+### 28 октября 2023 (М2У3 От прототипа к MVP)
 - [main_app.py](kivy/main_app_m2s3.txt) ```Использование функции check_int, реализация таймера на первом экране```
 - [ruffier.py](kivy/ruffier_m2s2.txt) ```Без изменений```
 - [seconds.py](kivy/seconds_m2s3.txt) ```Без изменений```
 
-### 4 ноября 2023
+### 4 ноября 2023 (М2У4 Визуализация и тестирование)
 Необходимые импорты для `sits.py`
 ```python
 from kivy.uix.label import Label
@@ -50,7 +52,7 @@ from kivy.uix.label import Label
 - [seconds.py](kivy/seconds_m2s3.txt) ```Без изменений```
 - [sits.py](kivy/sits_m2s4.txt) ```Реализация класса для счетчика приседаний```
 
-### 11 ноября 2023
+### 11 ноября 2023 (М2У4 Визуализация и тестирование)
 Необходимые импорты для `runner.py`
 ```python
 from kivy.properties import NumericProperty, BooleanProperty
@@ -80,17 +82,17 @@ python app.py -m screen:phone_oneplus_6t,portrait
 ##### Список экранов
 [screens.txt](screens.txt)
 
-## Анализ данных
-### 18 ноября 2023
+## М3. Анализ данных
+### 18 ноября 2023 (М3У1 Анализ данных. Основы работы с Pandas. Фильтрация данных)
 - [data_sience_1.py](pandas/data_sience_1.txt) 
 - [data_sience_2.py](pandas/data_sience_2.txt)
 
-### 25 ноября 2023
+### 25 ноября 2023 (М3У2 Методы группировки данных)
 - [data_sience_3.py](pandas/data_sience_3.txt) 
 - [data_sience_4.py](pandas/data_sience_4.txt)
 
 
-### 2 декабря 2023
+### 2 декабря 2023 (М3У3 Очистка данных. Feature engineering)
 - [data_cleaning.py](pandas/data_cleaning.txt) 
 - [feature_engineering.py](pandas/feature_engineering.txt)
 
