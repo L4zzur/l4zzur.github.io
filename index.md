@@ -90,6 +90,11 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [data_sience_4.py](pandas/data_sience_4.txt)
 
 
+### 2 декабря 2023
+- [data_cleaning.py](pandas/data_cleaning.txt) 
+- [feature_engineering.py](pandas/feature_engineering.txt)
+
+
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
 - [GPTGO.ai](https://gptgo.ai/?hl=ru) - поисковая выдача с GPT.
