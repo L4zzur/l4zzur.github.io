@@ -91,12 +91,32 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [data_sience_3.py](pandas/data_sience_3.txt) 
 - [data_sience_4.py](pandas/data_sience_4.txt)
 
+
 ### 2 декабря 2023 (М3У3 Очистка данных. Feature engineering)
 - [data_cleaning.py](pandas/data_cleaning.txt) 
 - [feature_engineering.py](pandas/feature_engineering.txt)
 
-### 20 января 2024
-[Импорты](https://gist.github.com/L4zzur/55ecffad770ec036597b2f7d25b0a070)
+
+## М5. 3D-игры
+### 3 февраля 2024 (М5У1 Знакомство с Panda 3D)
+#### Знакомство с Panda3D
+- [game.py](panda3d/lesson-1/game_test.txt)
+
+### My Minecraft часть 1
+- [game.py](panda3d/lesson-1/game.txt)
+- [mapmanager.py](panda3d/lesson-1/mapmanager.txt)
+
+### 10 февраля 2024 (М5У2 Загрузка карты. Работа с текстовыми файлами)
+#### Работа с текстовыми файлами
+- [file-reader.py](panda3d/lesson-2/file-reader.txt)
+
+#### My Minecraft часть 2
+Добавлена загрузка карты из внешнего txt файла
+- [game.py](panda3d/lesson-2/game.txt)
+- [mapmanager.py](panda3d/lesson-2/mapmanager.txt)
+- [hero.py](panda3d/lesson-2/hero.txt) (пока пустой)
+
+
 
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.

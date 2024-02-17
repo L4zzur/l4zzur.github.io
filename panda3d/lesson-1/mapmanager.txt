@@ -1,0 +1,21 @@
+class Mapmanager:
+    """Класс для управления картой"""
+
+    def __init__(self, game):
+        self.game = game
+        self.model = "block.egg"
+        self.texture = self.game.loader.loadTexture("block.png")
+        self.color = (0.2, 0.2, 0.35, 1)
+
+        self.startNew()  # создание основного узла карты
+        self.addBlock((0, 10, 0))  # добавляем один блок
+
+    def startNew(self):
+        self.land = self.game.render.attachNewNode("Land")
+
+    def addBlock(self, position):
+        self.block = self.game.loader.loadModel(self.model)
+        self.block.setTexture(self.texture)
+        self.block.setColor(self.color)
+        self.block.setPos(position)
+        self.block.reparentTo(self.land)

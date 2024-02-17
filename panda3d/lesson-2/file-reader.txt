@@ -1,0 +1,50 @@
+
+#! 1. Сколько цифр 1 содержится в файле?
+count = 0
+with open("my_file.txt") as f:
+    for line in f:
+        for symbol in line.split(" "):
+            if int(symbol) == 1:
+                count += 1
+print("Задача 1:", count)
+
+#! 2. Какой элемент расположен на 8 месте 14 строки?
+with open("my_file.txt") as f:
+    lines = f.readlines()
+    line = lines[13].split(" ")
+    symbol = line[7]
+    print("Задача 2:", symbol)
+
+#! 3. Найди сумму всех чисел в файле
+count = 0
+with open("my_file.txt") as f:
+    for line in f:
+        for symbol in line.split(" "):
+            count += int(symbol)
+print("Задача 3:", count)
+
+
+#! 4. Найди сумму элементов в 3, 6, 9 и 12 строках
+count = 0
+with open("my_file.txt") as f:
+    lines = f.readlines()
+    for i in range(len(lines)):
+        line_list = lines[i].split(" ")
+        for j in range(len(line_list)):
+            if i in [2, 5, 8, 11]:
+                count += int(line_list[j])
+print("Задача 4:", count)
+
+#! 5. Найди сумму максимальных элементов во всех строках!
+count = 0
+max_elem = 0
+with open("my_file.txt") as f:
+    lines = f.readlines()
+    for i in range(len(lines)):
+        line_list = lines[i].split(" ")
+        for j in range(len(line_list)):
+            if int(line_list[j]) > max_elem:
+                max_elem = int(line_list[j])
+        count += max_elem
+        max_elem = 0
+print("Задача 5:", count)
