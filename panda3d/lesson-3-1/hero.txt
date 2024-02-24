@@ -1,0 +1,38 @@
+key_switch_camera = "c"
+
+
+class Hero:
+    def __init__(self, game, pos, land):
+        self.game = game
+        self.land = land
+        self.mode = True  # Режим прохождения сквозь всё
+        self.hero = self.game.loader.loadModel("smiley")
+        self.hero.setColor(1, 0.5, 0)
+        self.hero.setScale(0.3)
+        self.hero.setPos(pos)
+        self.hero.reparentTo(self.game.render)
+        self.cameraBind()
+        self.accept_events()
+
+    def cameraBind(self):
+        self.game.disableMouse()
+        self.game.camera.setH(180)
+        self.game.camera.reparentTo(self.hero)
+        self.game.camera.setPos(0, 0, 1.5)
+        self.cameraOn = True
+
+    def cameraUnbind(self):
+        self.game.enableMouse()
+        self.game.camera.reparentTo(self.game.render)
+        pos = self.hero.getPos()
+        self.game.mouseInterfaceNode.setPos(-pos[0], -pos[1], -pos[2] - 3)
+        self.cameraOn = False
+
+    def changeView(self):
+        if self.cameraOn:
+            self.cameraUnbind()
+        else:
+            self.cameraBind()
+
+    def accept_events(self):
+        self.game.accept(key_switch_camera, self.changeView)

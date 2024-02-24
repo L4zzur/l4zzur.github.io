@@ -117,6 +117,14 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [hero.py](panda3d/lesson-2/hero.txt) (пока пустой)
 
 
+### 17 февраля 2024 (	М5У3 Управление игроком)
+
+#### My Minecraft часть 3.1
+Добавлен объект Hero
+- [game.py](panda3d/lesson-3-1/game.txt)
+- [mapmanager.py](panda3d/lesson-3-1/mapmanager.txt)
+- [hero.py](panda3d/lesson-3-1/hero.txt) 
+
 
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
