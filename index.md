@@ -125,6 +125,10 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [mapmanager.py](panda3d/lesson-3-1/mapmanager.txt)
 - [hero.py](panda3d/lesson-3-1/hero.txt) 
 
+#### My Minecraft часть 3.2
+- [game.py](panda3d/lesson-3-2/game.txt)
+- [mapmanager.py](panda3d/lesson-3-2/mapmanager.txt)
+- [hero.py](panda3d/lesson-3-2/hero.txt) 
 
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.

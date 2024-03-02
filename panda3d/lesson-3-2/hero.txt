@@ -1,0 +1,126 @@
+key_switch_camera = "c"
+
+key_turn_left = "n"
+key_turn_right = "m"
+
+key_forward = "w"
+key_left = "a"
+key_back = "s"
+key_right = "d"
+
+
+class Hero:
+    def __init__(self, game, pos, land):
+        self.game = game
+        self.land = land
+        self.mode = True  # Режим прохождения сквозь всё
+        self.hero = self.game.loader.loadModel("smiley")
+        self.hero.setColor(1, 0.5, 0)
+        self.hero.setScale(0.3)
+        self.hero.setPos(pos)
+        self.hero.reparentTo(self.game.render)
+        self.cameraBind()
+        self.accept_events()
+
+    def cameraBind(self):
+        self.game.disableMouse()
+        self.game.camera.setH(180)
+        self.game.camera.reparentTo(self.hero)
+        self.game.camera.setPos(0, 0, 1.5)
+        self.cameraOn = True
+
+    def cameraUnbind(self):
+        self.game.enableMouse()
+        self.game.camera.reparentTo(self.game.render)
+        pos = self.hero.getPos()
+        self.game.mouseInterfaceNode.setPos(-pos[0], -pos[1], -pos[2] - 3)
+        self.cameraOn = False
+
+    def changeView(self):
+        if self.cameraOn:
+            self.cameraUnbind()
+        else:
+            self.cameraBind()
+
+    def accept_events(self):
+        self.game.accept(key_switch_camera, self.changeView)
+
+        self.game.accept(key_turn_left, self.turn_left)
+        self.game.accept(key_turn_left + "-repeat", self.turn_left)
+
+        self.game.accept(key_turn_right, self.turn_right)
+        self.game.accept(key_turn_right + "-repeat", self.turn_right)
+
+        self.game.accept(key_forward, self.forward)
+        self.game.accept(key_forward + "-repeat", self.forward)
+
+        self.game.accept(key_left, self.left)
+        self.game.accept(key_left + "-repeat", self.left)
+
+        self.game.accept(key_right, self.right)
+        self.game.accept(key_right + "-repeat", self.right)
+
+        self.game.accept(key_back, self.back)
+        self.game.accept(key_back + "-repeat", self.back)
+
+
+    def turn_left(self):
+        self.hero.setH((self.hero.getH() + 5) % 360)
+    
+    def turn_right(self):
+        self.hero.setH((self.hero.getH() - 5) % 360)
+    
+    def look_at(self, angle):
+        x_from = round(self.hero.getX())
+        y_from = round(self.hero.getY())
+        z_from = round(self.hero.getZ())
+
+        dx, dy = self.check_dir(angle)
+        x_to = x_from + dx
+        y_to = y_from + dy
+        z_to = z_from
+
+        return x_to, y_to, z_to
+
+    def check_dir(self, angle):
+        if (angle >= 0 and angle <= 20) or (angle >= 335):
+            return 0, -1
+        elif angle <= 65:
+            return 1, -1
+        elif angle <= 110:
+            return 1, 0
+        elif angle <= 155:
+            return 1, 1
+        elif angle <= 200:
+            return 0, 1
+        elif angle <= 245:
+            return -1, 1
+        elif angle <= 290:
+            return -1, 0
+        elif angle <= 335:
+            return -1, -1
+    
+    def forward(self):
+        angle = self.hero.getH() % 360
+        self.move_to(angle)
+    
+    def left(self):
+        angle = (self.hero.getH() + 90) % 360
+        self.move_to(angle)
+    
+    def back(self):
+        angle = (self.hero.getH() + 180) % 360
+        self.move_to(angle)
+
+    def right(self):
+        angle = (self.hero.getH() + 270) % 360
+        self.move_to(angle)
+
+    def just_move(self, angle):
+        """передвижение в режиме наблюдателя"""
+        pos = self.look_at(angle)
+        self.hero.setPos(pos)
+    
+    def move_to(self, angle):
+        if self.mode:
+            self.just_move(angle)
