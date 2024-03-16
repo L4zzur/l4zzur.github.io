@@ -1,0 +1,105 @@
+import pickle
+
+
+class Mapmanager:
+    """Класс для управления картой"""
+
+    def __init__(self, game):
+        self.game = game
+        self.model = "block.egg"
+        self.texture = self.game.loader.loadTexture("block.png")
+        self.colors = [
+            (0.2, 0.2, 0.35, 1),
+            (0.2, 0.5, 0.2, 1),
+            (0.7, 0.2, 0.2, 1),
+            (0.5, 0.3, 0.0, 1)
+        ]  # rgba
+
+        self.startNew()  # создание основного узла карты
+
+    def startNew(self):
+        self.land = self.game.render.attachNewNode("Land")
+
+    def addBlock(self, position):
+        self.block = self.game.loader.loadModel(self.model)
+        self.block.setTexture(self.texture)
+        self.color = self.getColor(position[2])
+        self.block.setColor(self.color)
+        self.block.setPos(position)
+        self.block.reparentTo(self.land)
+        self.block.setTag("at", str(position))
+    
+    def delBlock(self, position):
+        blocks = self.findBlocks(position)
+        for block in blocks:
+            block.removeNode()
+    
+    def buildBlock(self, position):
+        x, y, z = position
+        new_pos = self.findHighestEmpty(position)
+        if new_pos[2] < z + 2:
+            self.addBlock(new_pos)
+    
+    def destroyBlock(self, position):
+        x, y, z = position
+        new_pos = x, y, z - 1
+        for block in self.findBlocks(new_pos):
+            block.removeNode()
+
+    def getColor(self, z):
+        if z < len(self.colors):
+            return self.colors[z]
+        else:
+            return self.colors[len(self.colors) - 1]
+
+    def clear(self):
+        self.land.removeNode()
+        self.startNew()
+
+    def loadLand(self, filename):
+        self.clear()
+        with open(filename) as f:
+            y = 0
+            for line in f:
+                x = 0
+                line = line.split(" ")
+                for _z in line:
+                    for z in range(int(_z) + 1):
+                        self.addBlock((x, y, z))
+                    x += 1
+                y += 1
+        return x, y
+
+    def findBlocks(self, pos):
+        return self.land.findAllMatches("=at=" + str(pos))
+    
+    def isEmpty(self, pos):
+        blocks = self.findBlocks(pos)
+        if blocks:
+            return False
+        else:
+            return True
+    
+    def findHighestEmpty(self, pos):
+        x, y, z = pos
+        z = 1
+        while not self.isEmpty((x, y, z)):
+            z += 1
+        return (x, y, z)
+
+    def saveMap(self):
+        blocks = self.land.getChildren()
+        with open("map.dat", "wb") as f:
+            pickle.dump(len(blocks), f)
+            for block in blocks:
+                x, y, z = block.getPos()
+                pos = (int(x), int(y), int(z))
+                pickle.dump(pos, f)
+    
+    def loadMap(self):
+        self.clear()
+        with open("map.dat", "rb") as f:
+            length = pickle.load(f)
+            for i in range(length):
+                pos = pickle.load(f)
+                self.addBlock(pos)

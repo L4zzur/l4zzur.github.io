@@ -136,11 +136,11 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [mapmanager.py](panda3d/lesson-4-1/mapmanager.txt)
 - [hero.py](panda3d/lesson-4-1/hero.txt)
 
-<!-- ### 9 марта 2024 (М5У4 Основной игровой режим)
+### 9 марта 2024 (М5У4 Основной игровой режим)
 #### My Minecraft часть 4.2
 - [game.py](panda3d/lesson-4-2/game.txt)
 - [mapmanager.py](panda3d/lesson-4-2/mapmanager.txt)
-- [hero.py](panda3d/lesson-4-2/hero.txt) -->
+- [hero.py](panda3d/lesson-4-2/hero.txt)
 
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
