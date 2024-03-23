@@ -142,6 +142,26 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [mapmanager.py](panda3d/lesson-4-2/mapmanager.txt)
 - [hero.py](panda3d/lesson-4-2/hero.txt)
 
+
+## М6. Веб-разработка
+### 16 марта 2024 (М6У1 Введение в веб-разработку)
+#### Основные задания
+- [task1.html](web/lesson-1/part-1/task1.txt)
+- [task2.html](web/lesson-1/part-1/task2.txt)
+- [task3.html](web/lesson-1/part-1/task3.txt)
+- [task4.html](web/lesson-1/part-1/task4.txt)
+- [task5.html](web/lesson-1/part-1/task5.txt)
+
+#### Бонусные задания
+- [task1.html](web/lesson-1/part-2/task1.txt)
+- [task2.html](web/lesson-1/part-2/task2.txt)
+- [task3.html](web/lesson-1/part-2/task3.txt)
+
+
+### 23 марта 2024 (М6У2 Оформление веб-страниц)
+#### Интернет
+
+
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
 - [GPTGO.ai](https://gptgo.ai/?hl=ru) - поисковая выдача с GPT.

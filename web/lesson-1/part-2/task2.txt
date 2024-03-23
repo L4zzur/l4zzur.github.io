@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Список дел</title>
+</head>
+
+<body>
+    <h2>Список дел</h2>
+
+    <ol>
+        <li><strike>Доделать домашнее задание</strike></li>
+        <li><strike>Помыть посуду</strike></li>
+        <li>Погулять с собакой</li>
+        <li>Нарисовать плакат</li>
+    </ol>
+</body>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Времена года</title>
+</head>
+
+<body>
+    <h1>Времена года</h1>
+    <ol>
+        <li><img src="/uploads/2020/10/осень_1601586402.png"></li>
+        <li><img src="/uploads/2020/10/зима_1601586385.png"></li>
+        <li><img src="/uploads/2020/10/весна_1601586373.png"></li>
+        <li><img src="/uploads/2020/10/лето_1601586394.png"> </li>
+    </ol>
+</body>
