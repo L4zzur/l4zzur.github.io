@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Код программы</title>
+</head>
+
+<body>
+    <h1 class="title">Код программы</h1>
+
+    <p><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, url_for, redirect <br>
+
+        <span class="keyword">import</span> os
+    </p>
+
+    <p><span class="keyword">def</span> index():<br>
+        <span class="keyword tab">return</span> redirect(url_for(
+        <span class="string">'static'</span>, filename = <span class="string">'index.html'</span>))
+    </p>
+
+    <p>folder = os.getcwd()</p>
+
+    <p>app = Flask(__name__, static_folder = folder)
+        <br>
+        app.add_url_rule(<span class="string">'/'</span>, <span class="string">'index'</span>)
+    </p>
+    <p><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:<br>
+        <span class="tab">app.run()</span>
+    </p>
+
+</body>

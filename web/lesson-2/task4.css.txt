@@ -1,0 +1,25 @@
+CSS .title {
+    font-weight: 500;
+    color: rgb(47, 79, 79);
+    font-size: 26px;
+}
+
+
+p {
+    font-style: normal;
+    color: rgb(47, 79, 79);
+}
+
+
+.keyword {
+    color: rgb(0, 0, 255);
+}
+
+
+.string {
+    color: rgb(182, 3, 3);
+}
+
+.tab {
+    margin-left: 20px
+}

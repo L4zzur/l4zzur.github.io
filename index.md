@@ -159,7 +159,21 @@ python app.py -m screen:phone_oneplus_6t,portrait
 
 
 ### 23 марта 2024 (М6У2 Оформление веб-страниц)
-#### Интернет
+#### Основы CSS
+- [task1.html](web/lesson-2/part-1/task1.html.txt)
+- [task2.css](web/lesson-2/part-1/task2.css.txt)
+- [task3.html](web/lesson-2/part-1/task3.html.txt)
+- [task3.css](web/lesson-2/part-1/task3.css.txt)
+- [task4.html](web/lesson-2/part-1/task4.html.txt)
+- [task4.css](web/lesson-2/part-1/task4.css.txt)
+- [task5.html](web/lesson-2/part-1/task5.html.txt)
+- [task5.css](web/lesson-2/part-1/task5.css.txt)
+
+#### Flask. Запуск веб-сервера
+- [index.html](web/lesson-2/flask/index.html.txt)
+- [style.css](web/lesson-2/flask/style.css.txt)
+- [helloworld.py](web/lesson-2/flask/helloworld.py.txt)
+- [simplesite.py](web/lesson-2/flask/simplesite.py.txt)
 
 
 ## AI чат-боты

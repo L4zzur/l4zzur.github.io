@@ -1,0 +1,59 @@
+p {
+    font-style: normal;
+    color: rgb(22, 16, 16);
+    font-size: 18px;
+}
+
+
+.darkred {
+    color: rgb(139, 0, 0);
+    background-color: rgb(255, 228, 225);
+}
+
+
+.red {
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 228, 225);
+}
+
+
+.salmon {
+    color: rgb(250, 128, 114);
+    background-color: rgb(255, 228, 225);
+}
+
+
+.blue {
+    color: rgb(0, 0, 255);
+    background-color: rgb(214, 228, 238);
+}
+
+
+.darkblue {
+    color: rgb(0, 0, 139);
+    background-color: rgb(214, 228, 238);
+}
+
+
+.lightblue {
+    color: rgb(135, 206, 250);
+    background-color: rgb(214, 228, 238);
+}
+
+
+.darkgreen {
+    color: rgb(0, 56, 0);
+    background-color: rgb(215, 235, 212);
+}
+
+
+.lightgreen {
+    color: rgb(122, 207, 122);
+    background-color: rgb(215, 235, 212);
+}
+
+
+.green {
+    color: rgb(0, 128, 0);
+    background-color: rgb(215, 235, 212);
+}
