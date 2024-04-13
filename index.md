@@ -176,6 +176,35 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [simplesite.py](web/lesson-2/flask/simplesite.py.txt)
 
 
+### 30 марта 2024 (М6У3 Работа с базой данных)
+#### Запросы к базе данных
+- [sql_queries.py](web/lesson-3/task1/sql_queries.py.txt) `Запросы к БД`
+- [Artistc.db](web/lesson-3/task1/Artistc.db) `База данных с людьми`
+
+#### SQLite + Flask
+- [helloworld.py](web/lesson-3/task2/helloworld.py.txt) `Закоментированный шаблон приложения Flask`
+- [data_to_web.py](web/lesson-3/task2/data_to_web.py.txt) `Приложение Flask, выводящее людей, родившихся в запрошенный год. Для нового года нужно перезапускать приложение`
+- [Artistc.db](web/lesson-3/task2/Artistc.db) `База данных с людьми`
+
+
+### 6 апреля 2024 (М6У4 Структура базы данных)
+Структура базы данных
+- [db_scripts.py](web/lesson-4/db_scripts.py.txt) `Скрипты для работы с БД: очистка, создание таблиц, добавление данных`
+- [quiz.py](web/lesson-4/quiz.py.txt) `пока пустой файл`
+- [result.html](web/lesson-4/result.html.txt) `заготовка`
+- [start.html](web/lesson-4/start.html.txt) `заготовка`
+- [style_quiz.css](web/lesson-4/style_quiz.css.txt) `заготовка`
+- [test.html](web/lesson-4/test.html.txt) `заготовка`
+
+
+### 13 апреля 2024 (М6У4 Структура базы данных / М6У5 Динамический сайт. Сессии)
+#### URL правила
+
+#### Сессии
+
+#### Бонусное задание. Счётчик
+
+
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
 - [GPTGO.ai](https://gptgo.ai/?hl=ru) - поисковая выдача с GPT.
