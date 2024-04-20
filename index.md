@@ -188,7 +188,7 @@ python app.py -m screen:phone_oneplus_6t,portrait
 
 
 ### 6 апреля 2024 (М6У4 Структура базы данных)
-Структура базы данных
+#### Структура базы данных
 - [db_scripts.py](web/lesson-4/db_scripts.py.txt) `Скрипты для работы с БД: очистка, создание таблиц, добавление данных`
 - [quiz.py](web/lesson-4/quiz.py.txt) `пока пустой файл`
 - [result.html](web/lesson-4/result.html.txt) `заготовка`
@@ -198,6 +198,20 @@ python app.py -m screen:phone_oneplus_6t,portrait
 
 
 ### 13 апреля 2024 (М6У4 Структура базы данных / М6У5 Динамический сайт. Сессии)
+#### Структура базы данных
+- [db_scripts.py](web/lesson-5/db_scripts.py.txt) `Добавили функцию для получения следующего вопроса`
+- [quiz.py](web/lesson-4/quiz.py.txt) `пока пустой файл`
+- [result.html](web/lesson-4/result.html.txt) `заготовка`
+- [start.html](web/lesson-4/start.html.txt) `заготовка`
+- [style_quiz.css](web/lesson-4/style_quiz.css.txt) `заготовка`
+- [test.html](web/lesson-4/test.html.txt) `заготовка`
+
+#### URL правила
+- [quiz_no_session.py](web/lesson-5/quiz_no_session.py.txt) `заготовка с главной страницей`
+
+
+
+### 20 апреля 2024 (М6У5 Динамический сайт. Сессии)
 #### URL правила
 
 #### Сессии
