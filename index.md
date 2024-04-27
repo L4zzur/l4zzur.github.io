@@ -213,10 +213,15 @@ python app.py -m screen:phone_oneplus_6t,portrait
 
 ### 20 апреля 2024 (М6У5 Динамический сайт. Сессии)
 #### URL правила
+- [quiz_no_session.py](web/lesson-5-1/quiz_no_session.py.txt) `доделанный вариант со страницей вопросов и финала, но без сессий`
 
 #### Сессии
+- [quiz.py](web/lesson-5-1/quiz.py.txt) `доделанный вариант со страницей вопросов и финала и уже с сессиями`
 
 #### Бонусное задание. Счётчик
+- [counter_global.py](web/lesson-5-1/counter_global.py.txt) `вариант счетчика с глобальной переменной`
+- [counter_session.py](web/lesson-5-1/counter_session.py.txt) `вариант счетчика с сессиями`
+
 
 
 ## AI чат-боты

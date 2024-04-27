@@ -1,0 +1,33 @@
+from flask import Flask, redirect, url_for, session
+from db_scripts import get_next_question
+
+
+def index():
+    session["quiz"] = 1
+    session["last_question"] = 0
+
+    return '<a href="/test">Перейти к викторине</a>'
+
+
+def test():
+    question = get_next_question(session["last_question"], session["quiz"])
+    if question is None or len(question) == 0:
+        return redirect(url_for("result"))
+    else:
+        session["last_question"] = question[0]
+        return f"<h1>{session["quiz"]}</h1><h2>{question}</h2>"
+
+
+def result():
+    return "<h1>That's all folks!</h1>"
+
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = "ThisIsSuperSecretKey"
+app.add_url_rule("/", "index", index)
+app.add_url_rule("/test", "test", test)
+app.add_url_rule("/result", "result", result)
+# 127.0.0.1:5000
+
+if __name__ == "__main__":
+    app.run()
