@@ -236,7 +236,9 @@ python app.py -m screen:phone_oneplus_6t,portrait
 
 ## AI чат-боты
 [chat for ai](https://chatforai.store/)
+
 [chkzh](https://nx.chkzh.com/)
+
 [chatgpt usbot](https://chatgpt.usbot.net/)
 
 ### Репозитории с ссылками на другие аналоги (в большинстве случаев на китайском языке)
