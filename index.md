@@ -231,6 +231,9 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [task4.html](web/lesson-6-1/task4.html.txt) `Сайт`
 
 
+### 4 мая 2024 (М6У6 Получение и обработка данных)
+[Тестовая база данных](web/lesson-6-2/quiz.db)
+
 ## AI чат-боты
 - [Huggingface](https://huggingface.co/chat/) - первая бесплатная и открытая альтернатива ChatGPT.
 - [GPTGO.ai](https://gptgo.ai/?hl=ru) - поисковая выдача с GPT.
