@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Анкета</title>
+</head>
+
+<body>
+    <form method="post" action="program">
+        <p>
+        <h2>Заполните анкету:</h2>
+        <p><b>Ваше имя: </b>
+            <input type="text" maxlength="25" size="25">
+        </p>
+        <p><b>Ваша фамилия: </b>
+            <input type="text" maxlength="25" size="25">
+        </p>
+        <p><b>Ваш возраст: </b>
+            <input type="number" name="age" value="14" min="10" max="18">
+        </p>
+
+        <p><b>Выберите курсы, которые Вас интересуют:</b>
+        <p><input type="checkbox" name="course" value="Scratch">Scratch</p>
+        <p><input type="checkbox" name="course" value="Gamedesing">Gamedesing</p>
+        <p><input type="checkbox" name="course" value="Python Start">Python Start</p>
+        <p><input type="checkbox" name="course" value="Python Pro">Python Pro</p>
+        </p>
+        <p><b>Дополнительный комментарий:</b>
+            <textarea name="comment"></textarea>
+        </p>
+        <p><input type="submit" value="Отправить"></p>
+
+    </form>
+</body>
+
+</html>

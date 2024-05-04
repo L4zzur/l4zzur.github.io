@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Авиарейс</title>
+</head>
+
+<body>
+<form method="post" action="program">
+    <h2>Поиск авиарейса</h2>
+    <p><b>Ваше имя:</b>
+    <input type="text" maxlength="25" size="25"></p>
+    <p><b>Ваша фамилия:</b>
+    <input type="text" maxlength="25" size="25"></p>
+    <p><b>Ваш пол:</b>
+    <input type="radio" name="gender" value="Мужской">Мужской
+    <input type="radio" name="gender" value="Женский">Женский
+    </p>
+    <p><b>Выберите город:</b>
+        <select>
+            <option value="Москва">Москва</option>
+            <option value="Питер">Питер</option>
+            <option value="Казань">Казань</option>
+            <option value="Воронеж">Воронеж</option>
+            <option value="Омск">Омск</option>
+            <option value="Екатеринбург">Екатеринбург</option>
+        </select>
+    </p>
+
+    <p><b>Выберите дату:</b>
+    <input type="date" name="calendar"></p>
+    <p><b>Выберите желаемое время:</b>
+    <input type="time" name="time" value="00:00"></p>
+    <p><input type="submit" value="Поиск"></p>
+</form>
+</body>
+
+</html>

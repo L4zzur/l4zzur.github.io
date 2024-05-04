@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Сайт</title>
+</head>
+
+<body>
+<form method="post" action="program">
+    <h2>Дизайн сайта</h2>
+    <p><b>Предпочитаемая палитра цветов:</b></p>
+    <p><input type="radio" name="palette" value="1">Яркие цвета</p>
+    <p><input type="radio" name="palette" value="2">Пастельные цвета</p>
+
+    <p><b>Хотели бы видеть у себя на сайте эти цвета (отметьте галочкой, если "да"):</b></p>
+    <p><input type="checkbox" name="color" value="Белый">Белый</p>
+    <p><input type="checkbox" name="color" value="Черный">Черный</p>
+    <p><input type="checkbox" name="color" value="Фиолетовый">Фиолетовый</p>
+    <p><input type="checkbox" name="color" value="Желтый">Желтый</p>
+    <p><input type="checkbox" name="color" value="Красный">Красный</p>
+
+    <p><b>Укажите основной цвет:</b>
+    <input type="color" name="maincolor" value="#ff0000"></p>
+
+    <p><input type="submit" value="Заказать"></p>
+</form>
+</body>
+
+</html>

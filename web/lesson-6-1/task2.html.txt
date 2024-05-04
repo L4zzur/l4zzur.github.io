@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Авторизация</title>
+</head>
+
+<body>
+    <form method="post" action="program">
+        <h3>Заполни форму авторизации:</h3>
+        <p><input name="login" placeholder="Логин"></p>
+        <p><input name="pass" type="password" placeholder="Пароль"></p>
+        <p><input type="submit" value="Вход"> <input type="reset" value="Очистить"></p>
+    </form>
+</body>
+
+</html>
