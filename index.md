@@ -226,9 +226,9 @@ python app.py -m screen:phone_oneplus_6t,portrait
 ### 27 апреля 2024 (М6У6 Получение и обработка данных)
 #### HTML-формы
 - [task1.html](web/lesson-6-1/task1.html.txt) `Анкета`
-- [task2.html](web/lesson-6/task2.html.txt) `Авторизация`
-- [task3.html](web/lesson-6/task3.html.txt) `Авиарейс`
-- [task4.html](web/lesson-6/task4.html.txt) `Сайт`
+- [task2.html](web/lesson-6-1/task2.html.txt) `Авторизация`
+- [task3.html](web/lesson-6-1/task3.html.txt) `Авиарейс`
+- [task4.html](web/lesson-6-1/task4.html.txt) `Сайт`
 
 
 ## AI чат-боты
