@@ -252,6 +252,16 @@ python app.py -m screen:phone_oneplus_6t,portrait
 - [sitetemplate.py](web/lesson-7/task2/sitetemplate.py.txt)
 - [style.css](web/lesson-7/task2/style.css.txt)
 
+##### Файлы проекта
+###### HTML
+- [start.html](web/lesson-7/start.html.txt)
+- [test.html](web/lesson-7/test.html.txt)
+- [result.html](web/lesson-7/result.html.txt)
+- [style_quiz.css](web/lesson-7/style_quiz.css.txt)
+###### Python
+- [db_scripts.py](web/lesson-7/db_scripts.py.txt)
+- [quiz.py](web/lesson-7/quiz.py.txt)
+
 
 ## AI чат-боты
 [chat for ai](https://chatforai.store/)
