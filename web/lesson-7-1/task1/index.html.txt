@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title> My Page</title>
+</head>
+
+<body>
+    <h1>Какой-нибудь текст</h1>
+</body>
+
+</html>

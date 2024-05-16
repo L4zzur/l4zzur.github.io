@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>My Page</title>
+</head>
+
+<body>
+    <form method="post" action="/">
+        {% if p_list %}
+        {% for name, city in p_list %}
+        <p>{{ name }} из города {{ city }}</p>
+        {% endfor %}
+        {% else %}
+        <h2>Список участников не передан</h2>
+        {% endif %}
+    </form>
+</body>
+
+</html>

@@ -241,6 +241,16 @@ python app.py -m screen:phone_oneplus_6t,portrait
 
 ### 11 мая 2024 (М6У7 Шаблоны)
 
+#### Шаблоны
+##### Задание 1
+- [index.html](web/lesson-7/task1/index.html.txt)
+- [sitetemplate.py](web/lesson-7/task1/sitetemplate.py.txt)
+- [style.css](web/lesson-7/task1/style.css.txt)
+
+##### Задание 2
+- [index.html](web/lesson-7/task2/index.html.txt)
+- [sitetemplate.py](web/lesson-7/task2/sitetemplate.py.txt)
+- [style.css](web/lesson-7/task2/style.css.txt)
 
 
 ## AI чат-боты
