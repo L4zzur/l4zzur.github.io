@@ -243,25 +243,30 @@ python app.py -m screen:phone_oneplus_6t,portrait
 
 #### Шаблоны
 ##### Задание 1
-- [index.html](web/lesson-7/task1/index.html.txt)
-- [sitetemplate.py](web/lesson-7/task1/sitetemplate.py.txt)
-- [style.css](web/lesson-7/task1/style.css.txt)
+- [index.html](web/lesson-7-1/task1/index.html.txt)
+- [sitetemplate.py](web/lesson-7-1/task1/sitetemplate.py.txt)
+- [style.css](web/lesson-7-1/task1/style.css.txt)
 
 ##### Задание 2
-- [index.html](web/lesson-7/task2/index.html.txt)
-- [sitetemplate.py](web/lesson-7/task2/sitetemplate.py.txt)
-- [style.css](web/lesson-7/task2/style.css.txt)
+- [index.html](web/lesson-7-1/task2/index.html.txt)
+- [sitetemplate.py](web/lesson-7-1/task2/sitetemplate.py.txt)
+- [style.css](web/lesson-7-1/task2/style.css.txt)
+
+
+### 18 мая 2024 (М6У7 Шаблоны)
 
 ##### Файлы проекта
-###### HTML
-- [start.html](web/lesson-7/start.html.txt)
-- [test.html](web/lesson-7/test.html.txt)
-- [result.html](web/lesson-7/result.html.txt)
-- [style_quiz.css](web/lesson-7/style_quiz.css.txt)
-###### Python
-- [db_scripts.py](web/lesson-7/db_scripts.py.txt)
-- [quiz.py](web/lesson-7/quiz.py.txt)
 
+###### HTML
+- [start.html](web/lesson-7-2/start.html.txt)
+- [test.html](web/lesson-7-2/test.html.txt)
+- [result.html](web/lesson-7-2/result.html.txt)
+- [style_quiz.css](web/lesson-7-2/style_quiz.css.txt)
+###### Python
+- [db_scripts.py](web/lesson-7-2/db_scripts.py.txt)
+- [quiz.py](web/lesson-7-2/quiz.py.txt)
+###### База данных (заполненная)
+- [quiz.db](web/lesson-7-2/quiz.db)
 
 ## AI чат-боты
 [chat for ai](https://chatforai.store/)

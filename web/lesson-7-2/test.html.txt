@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_quiz.css') }}">
+    <title>Викторина</title>
+</head>
+
+<body>
+    {% if question %}
+    <h1>{{ question }}</h1>
+    {% endif %}
+
+    <form method="post" action="test">
+        <input type="hidden" name="question_id" value="{{ question_id }}">
+        {% for answer in answers %}
+        <input type="radio" name="answer" value="{{ answer }}">{{ answer }}
+        {% endfor %}
+        <p><input type="submit" value="Ответить"></p>
+    </form>
+
+</body>
+
+</html>

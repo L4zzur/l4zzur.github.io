@@ -1,0 +1,86 @@
+from flask import Flask, redirect, url_for, session, request, render_template
+from db_scripts import (
+    get_next_question,
+    get_quizes,
+    get_quiz_count,
+    get_random_quiz_id,
+    check_answer,
+)
+from random import shuffle
+import os
+
+
+def start_quiz(quiz_id):
+    session["quiz"] = quiz_id
+    session["last_question"] = 0
+    session["total"] = 0
+    session["answers"] = 0
+
+
+def end_quiz():
+    session.clear()
+
+
+def get_form_quizes():
+    quizes = get_quizes()
+    return render_template("start.html", quizes=quizes)
+
+
+def index():
+    if request.method == "GET":
+        start_quiz(-1)
+        return get_form_quizes()
+    elif request.method == "POST":
+        quiz_id = request.form.get("quiz")
+        start_quiz(quiz_id)
+        return redirect(url_for("test"))
+
+
+def get_form_question(question):
+    answers = [question[2], question[3], question[4], question[5]]
+    shuffle(answers)
+    return render_template(
+        "test.html", question=question[1], question_id=question[0], answers=answers
+    )
+
+
+def save_answer():
+    answer = request.form.get("answer")
+    question_id = request.form.get("question_id")
+    session["last_question"] = question_id
+    session["total"] += 1  # увеличиваем общий счетчик вопросов
+    if check_answer(question_id, answer):
+        session["answers"] += 1
+
+
+def test():
+    if "quiz" in session and int(session["quiz"]) >= 0:
+        if request.method == "POST":
+            save_answer()
+        question = get_next_question(session["last_question"], session["quiz"])
+        if question is None or len(question) == 0:
+            return redirect(url_for("result"))
+        else:
+            return get_form_question(question)
+    else:
+        return redirect(url_for("index"))
+
+
+def result():
+    html = render_template(
+        "result.html", right=session["answers"], total=session["total"]
+    )
+    end_quiz()
+    return html
+
+
+folder = os.getcwd()
+app = Flask(__name__, template_folder=folder, static_folder=folder)
+app.config["SECRET_KEY"] = "ThisIsSuperSecretKey"
+app.add_url_rule("/", "index", index, methods=["GET", "POST"])
+app.add_url_rule("/test", "test", test, methods=["GET", "POST"])
+app.add_url_rule("/result", "result", result)
+# 127.0.0.1:5000
+
+if __name__ == "__main__":
+    app.run()

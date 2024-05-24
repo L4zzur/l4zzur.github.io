@@ -251,7 +251,7 @@ def show_tables():
 def get_next_question(question_id=0, quiz_id=1):
     open()
     query = """
-    SELECT quiz_content.id, question.answer, question.wrong1, question.wrong2, question.wrong3 
+    SELECT quiz_content.id, question.question, question.answer, question.wrong1, question.wrong2, question.wrong3 
     FROM quiz_content, question
     WHERE quiz_content.question_id == question.id 
     AND quiz_content.quiz_id == ?
@@ -262,6 +262,31 @@ def get_next_question(question_id=0, quiz_id=1):
     result = cursor.fetchone()
     close()
     return result
+
+
+def check_answer(question_id, answer):
+    query = """
+    SELECT question.answer
+    FROM quiz_content, question
+    WHERE quiz_content.id == ?
+    AND quiz_content.question_id == question.id
+    """
+    open()
+    cursor.execute(
+        query,
+        [
+            str(question_id),
+        ],
+    )
+    result = cursor.fetchone()
+    close()
+    if result is None:  # если ответа нет
+        return False
+    else:
+        if result[0] == answer:  # если ответ совпал с правильными
+            return True
+        else:  # если не совпал
+            return False
 
 
 def main():
